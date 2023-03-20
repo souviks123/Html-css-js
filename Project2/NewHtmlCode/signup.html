@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="return ValidateEmail(),validatephn(),validatepass()" action="cofee.html" >
+        <!-- class named "container" is assigned to div -->
+        <div class="container">
+            <h1>Register</h1>
+            <p>Kindly fill in this form to register.</p>
+
+            <label for="username"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter your full name" name="fullname" id="fullname" required />
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter username" name="username" id="username" required />
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required />
+            
+            <label for="phone"><b>Phone no</b></label>
+            <input type="number" placeholder="Enter Phone no" name="phone" id="phone" required />
+
+            <label for="pwd"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pwd" id="pwd" required />
+
+            <label for="pwd-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="pwd-repeat" id="pwd-repeat" required />
+
+            <button type="submit">Register</button>
+        </div>
+
+        <div class="exists">
+            <p>Already have an account? <a href="index.html">Log in</a>.</p>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>

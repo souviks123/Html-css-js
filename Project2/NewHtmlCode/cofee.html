@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cofee.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hi</h1>
+    <p>Full Name: <span id="gname" style="color: red;">Souvik Mandal</span></p>
+
+    <p>Username: <span id="guname" style="color: red;">Souvik</span></p>
+
+    <p>Email id: <span id="gemail" style="color: red;">souvik.mandal@clinisys.com</span></p>
+
+    <p>Phone no: <span id="gphone" style="color: red;">9836454215</span></p>
+    <a href="index.html"><button>Back</button></a>
+    <div class="container">
+        <div class="coffee-header">
+            <div class="coffee-header__buttons coffee-header__button-one"></div>
+            <div class="coffee-header__buttons coffee-header__button-two"></div>
+            <div class="coffee-header__display"></div>
+            <div class="coffee-header__details"></div>
+        </div>
+        <div class="coffee-medium">
+            <div class="coffe-medium__exit"></div>
+            <div class="coffee-medium__arm"></div>
+            <div class="coffee-medium__liquid"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-one"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-two"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-three"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-for"></div>
+            <div class="coffee-medium__cup"></div>
+        </div>
+        <div class="coffee-footer"></div>
+    </div>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const fullName = urlParams.get('fullname');
+        const username = urlParams.get('username');
+        const Email = urlParams.get('email');
+        const Phone = urlParams.get('phone');
+        document.getElementById("gname").innerHTML = fullName;
+        document.getElementById("guname").innerHTML = username;
+        document.getElementById("gemail").innerHTML = Email;
+        document.getElementById("gphone").innerHTML = Phone;
+    </script>
+</body>
+
+</html>
