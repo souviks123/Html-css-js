@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+
+
+</head>
+
+<body style="background: url(download.png); background-size: 50%;">
+  <center>
+    <h1>My second page</h1>
+  </center>
+
+  <center>
+    <table>
+      <tr>
+        <th style="color: blue;">First Name</th>
+        <th style="color: blue;">Last Name</th>
+        <th style="color: blue;">Phone No</th>
+        <th style="color: blue;">Address</th>
+        <th style="color: blue;">Email</th>
+        <th style="color: blue;">Gender</th>
+      </tr>
+      <tr>
+        <td id="fname1" style="color: rgb(255, 0, 0);"></td>
+        <td id="lname1" style="color: rgb(255, 0, 0);"></td>
+        <td id="phoneno1" style="color: rgb(255, 0, 0);"></td>
+        <td id="address1" style="color: rgb(255, 0, 0);"></td>
+        <td id="email1" style="color: rgb(255, 0, 0);"></td>
+        <td id="gender1" style="color: rgb(255, 0, 0);"></td>
+      </tr>
+    </table>
+  </center>
+  <center>
+    <h1>Know more about html</h1>
+  </center>
+  <center><a href="https://www.w3schools.com/html/" title="Html">Visit W3Schools.com!</a></center>
+
+  <!-- <div id="showForm" style="width: 100px; margin-top: 130px; color: aqua; font-size: 25px;">
+    <label id="fname">Sudarshan</label>
+    <label id="lname">Das</label>
+    <label id="phoneno">8765432190</label>    
+  </div> -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('fname') && urlParams.get('lname') && urlParams.get('phoneno') && urlParams.get('address') && urlParams.get('email') && urlParams.get('gender') != null){
+      document.getElementById("fname1").innerHTML = urlParams.get('fname');
+      document.getElementById("lname1").innerHTML = urlParams.get('lname');
+      document.getElementById("phoneno1").innerHTML = urlParams.get('phoneno');
+      document.getElementById("address1").innerHTML = urlParams.get('address');
+      document.getElementById("email1").innerHTML = urlParams.get('email');
+      document.getElementById("gender1").innerHTML = urlParams.get('gender');
+    }
+      // document.getElementById("showForm").innerHTML = urlParams.get('fname') + "<br>" + urlParams.get('lname')
+      //   + "<br>" + urlParams.get('phoneno') + "<br>" + urlParams.get('address') + "<br>" + urlParams.get('email') + "<br>" +
+      //   urlParams.get('gender');
+
+
+
+  </script>
+  
+
+
+</body>
+
+</html>
